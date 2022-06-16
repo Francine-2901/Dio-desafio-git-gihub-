@@ -1,8 +1,11 @@
-*Entendendo o que é Git e sua importância:
+### Entendendo o que é Git e sua importância:
+
 Git é um sistema de direcionamento de código.
 Ex. de jornalista que tem que entregar um reportagem, faz rascunhos de redações, vai apresentando ao chefe/supervisor verificar e vai criando outros rascunhos com as alterações e depois quando estiver alinhado da forma correta é gerado a redação final.
 
-*Comandos básicos para um bom desempenho no terminal:
+
+
+### Comandos básicos para um bom desempenho no terminal:
 
 GUI - Graphical User Interface interage por meio de interface gráfica, clicar, teclar, arrastar é diferente do CLI - Command line interface que interage com um linha de comando, é usado nesta aula sobre Git.
 
@@ -14,9 +17,11 @@ mkdir - para criar um nova pasta ou arquivo
 del ou rmdir - para deletar
 cls - para limpar o terminal
 
-Dica: Quando for digitar o nome de alguma pasta ou arquivo, quando digita o início e apertar o TAB, ele automaticamente identifica a pasta e completa o nome, ajuda a reduzir o tempo.
+**Dica:** Quando for digitar o nome de alguma pasta ou arquivo, quando digita o início e apertar o TAB, ele automaticamente identifica a pasta e completa o nome, ajuda a reduzir o tempo.
 
-*Realizando a instalação do GIT:
+
+
+### Realizando a instalação do GIT:
 
 Usando o site oficial: https://git-scm.com/
 Passo a passo:
@@ -34,48 +39,60 @@ Next e install. Ok
 Para se certificar que foi instalado, clicar no simbolo do windows no teclado ou na tela e digitar “Git”
 
 
-*Tópicos fundamentais para entender o funcionamento do Git:
 
-A sigla SHA significa Secure Hash Algorithm, é um conjunto de funções hash criptográficas projetadas pela NSA (agência de segurança nacional dos EUA). Se tem um arquivo de texto roda o arquivo no Git ele gera um caracteres de identificador de 40 dígitos, se for alterado uma vírgula, gera outro identificado diferente.
+### Tópicos fundamentais para entender o funcionamento do Git:
+
+A sigla <u>SHA</u> significa Secure Hash Algorithm, é um conjunto de funções hash criptográficas projetadas pela NSA (agência de segurança nacional dos EUA). Se tem um arquivo de texto roda o arquivo no Git ele gera um caracteres de identificador de 40 dígitos, se for alterado uma vírgula, gera outro identificado diferente.
 É uma forma curta de representar um arquivo.
 
-> Na área de trabalho clicar com o direito e clicar em Git Bash Here.
+Na área de trabalho clicar como direito do mouse e clicar em Git Bash Here.
 
-Nota Fran: Ideal criar um arquivo com um textinho curto ou frase para usar no bloco de notas para testar como funciona um SHA1.
+**Nota Fran**: Ideal criar um arquivo com um textinho curto ou frase para usar no bloco de notas para testar como funciona um SHA1.
 
 Digita openssl sha1 texto.txt(nome do arquivo do bloco de notas) e enter>
 Em seguida vai mostrar o código de 40 caracteres. podem ser feitos testes alterando um vírgula/letra e fazer o mesmo processo, vai mostrar outro identificador de 40 caracteres.
 O Git é um sistema distribuído seguro
 
-*Objetos internos do Git:
 
-São 3 tipos básicos:
 
-Blobs - Tem o tipo do objeto, o tamanho da string/arquivo usa \0 e o arquivo. Apresenta o nome do tipo de objeto, tamanho por sha1(códigos específicos 40 caract) 
+### Objetos internos do Git:
 
-Trees - Armazena e apontando p os tipos de blobs diferentes ou outras árvores, tem o \0. Já as árvores apresentam ñ somente apresenta como sha1 como, nome, pasta específica.
+*São 3 tipos básicos:*
 
-Commit - Junta tudo e dá sentido à interação do Git. O sha1 desse commit é o hash de toda essa informação.
+**Blobs** - Tem o tipo do objeto, o tamanho da string/arquivo usa \0 e o arquivo. Apresenta o nome do tipo de objeto, tamanho por sha1(códigos específicos 40 caract) 
 
-*Chave SSH e Token:
+**Trees** - Armazena e apontando p os tipos de blobs diferentes ou outras árvores, tem o \0. Já as árvores apresentam ñ somente apresenta como sha1 como, nome, pasta específica.
+
+**Commit** - Junta tudo e dá sentido à interação do Git. O sha1 desse commit é o hash de toda essa informação.
+
+
+
+### Chave SSH e Token:
 
 São formas de autenticação seguras do GitHub
-Chave SSH - é uma forma de estabelecer uma conexão segura encriptada entre duas máquinas.
+**Chave SSH** - é uma forma de estabelecer uma conexão segura encriptada entre duas máquinas.
 
-Token de acesso pessoal - Se assemelha mais ao processo de digitar nickname e senha, não tem a vantagem de não requerer senha como no SSH. Sempre que fizer um commit o Git pede usuário e senha.
+**Token de acesso pessoal** - Se assemelha mais ao processo de digitar nickname e senha, não tem a vantagem de não requerer senha como no SSH. Sempre que fizer um commit o Git pede usuário e senha.
 
 Nota Fran: Ideal criar um cadastro no site do github para ir praticando junto com as aulas.
 
 Aprendemos alguns comandos: usado no GitBash instalado no pc.
 
-cd -para navegar entres as pastas e pastas de pastas...
-ls - para listas o que tem dentro da pasta que está usando
-mkdir - para criar um nova pasta ou arquivo
-rm -rf (nome da pasta/arquivo).git - para deletar/remover
--a para ver arquivos ocultos
-ctrl + L - para limpar
+- cd - para navegar entres as pastas e pastas de pastas...
 
-Agora entrado no GitBash vamos criar SSH
+- ls - para listas o que tem dentro da pasta que está usando
+
+- mkdir - para criar um nova pasta ou arquivo
+
+- rm -rf (nome da pasta/arquivo).git - para deletar/remover
+
+- -a para ver arquivos ocultos
+
+- ctrl + L - para limpar
+
+  
+
+<u>Agora entrado no GitBash vamos criar SSH</u>
 
 ssh-keygen -t ed(código) -C (email cadastrado no github.com) e enter >Enter novamente
 Em seguida vai mostrar as informações de Identificação e chave pública foram salvas. E a imagem de um tipo de criptografia usada (The key fingerprint’)
@@ -95,7 +112,7 @@ No lado esquerdo terá um coluna, clicar na opção ‘SSH and GPS keys’
 Digitar o título, colar aquele código da chave pública copiado anteriormente e ‘Add SSH key’
 Obs: Em alguns casos pode solicitar uma senha para autenticação antes de gerar.
 
-> ls e enter > cd (nome da pasta usada 'ex .documentos')e enter > ls e enter > cd .ssh/ e enter
+ls e enter > cd(nome da pasta usada 'ex.domentos') e enter > ls e entar > cd. ssh/ e enter
 
 Depois pode usar o comando pwd para ver o caminho completo > pwd e enter > /c/Users/ (nome user do pc)/.ssh
 
@@ -133,16 +150,17 @@ Vai confirmar que clonou por meio da chave SSH
 Digita ls e enter, vai mostrar o repositório > Voltando no GitHub a chave passa a ficar verde e confirmando a última vez que foi usada.
 
 
-Agora vamos usar uma senha Token.
+
+<u>Agora vamos usar uma senha Token.</u>
 
 P criar vamos na setinha ▼ ao lado da foto de perfil e settings/definições
 Na coluna do lado esquerdo ir em "developer settings/ config. do desenvolvedor”
 
 Depois em Token de acesso pessoal e gerar novo token > Depois vai criar um nome, e neste caso ticar a opção “repo/ repositório” e ‘gerar token’ no final da tela.
-- Anotar em um local seguro, pois se sair da tela do código token e voltar ñ aparece novamente e precisará criar um novo código token.
 
-Agora vamos no repositório, no mesmo local, setting > Repositórios > clica no rep já criado
-> em code, copiar o código de HTML.
+**Anotar em um local seguro**, pois se sair da tela do código token e voltar ñ aparece novamente e precisará criar um novo código token.
+
+Agora vamos no repositório, no mesmo local, setting > Repositórios > clica no rep já criado, ir em code e copiar código de HTML.
 
 Volta para o Git instalado no pc e criar 1 pasta chamada ‘token-test’
 
@@ -160,13 +178,15 @@ Vai pedir o token (personal access token), cola e enter.
 
 Mostra o repositório clonado por meio do token de acesso pessoal.
 
-*Iniciando o Git e criando um commit:
+
+
+### Iniciando o Git e criando um commit:
 
 Para iniciar um repositório, vamos usar o ‘git init’
 Para mover arquivos, atualizar e dar início, vamos usar o ‘git add’
 Para criar commit vamos usar o ‘git commit ‘
 
--Criando um repositório.
+**Criando um repositório.**
 
 Acessar a pasta do diretório C: e ver se já foi criada a pasta workspace, caso ñ criar, antes de acessar a pasta , clicar com o direito em algum espaço em brando e depois clicar em “Git Bash Here”
 
@@ -182,51 +202,61 @@ Criar um “link de conexão” entre o Git local e o Git remoto
 git config --global user.email (email cadastrado no Github)
 git config --global user.name (nome cadastrado no Github)
 
-Markdown, é uma forma "mais humana" de se inscrever um arquivo HTML
+**Markdown**, é uma forma "mais humana" de se inscrever um arquivo HTML
 As # definem o tamanho da letra, quanto mais # é usada o título fica menor.
 
-Usar o .md para arquivos markdown
+Usar o <u>.md</u> para arquivos <u>markdown</u>
 
-Cont. criando um commit:
+<u>Cont. criando um commit:</u>
 Na pasta de livro-receitas no pc, clicar com o direito> novo> documento de texto
-Nomeá-la de strogonoff.md, neste exemplo.
+Colocar o nome de strogonoff.md, neste exemplo.
 
 Abrir o programa Typora > digital para # para o título principal, neste caso,  # Strogonoff de Frango e enter. > para o 2º título usa, neste caso, ## Ingredientes
 Terminar de digitar, formatar e salvar.
 
-Outros comandos:
-Usar ** para negrito/destaque. Ex. **flor** fica flor
-Usar _ para itálico. Ex. _flor_ fica flor
-Usar : para emoticons. Ex. :Flor vai mostrar as opções e selecione o emoticon 🌻
-Usar - e espaço para criar listas Ex. - espaço e flor fica • flor
+**Outros comandos:**
+
+- Usar ** para negrito/destaque. Ex. **flor** fica flor
+- Usar _ para itálico. Ex. _ flor_ fica *flor*
+- Usar : para emoticons. Ex. :Flor vai mostrar as opções e selecione o emoticon 🌻
+- Usar - e espaço para criar listas Ex. - espaço e flor fica • flor
+
+
 
 Para mais funções de formatação, ir na barra de ferramentas, clicar em ‘help/ajuda’ > depois em ‘markdown reference’ e vai abrir um guia de instruções.
 
 Usando o git add * e enter > git commit -m “commit inicial” e enter, para gerar o commit no git bash mostram o início número  de 40 caracteres do SHA1 identificando o commit.
 
 
-*Passo a passo no ciclo de vida:
 
-Tracked são arquivos que podem ser rastreados no git pode ter 3 estágios diferentes:
+### Passo a passo no ciclo de vida:
 
-Unmodified - É o arquivo que ainda não foi modificado. Se ele não for usado e for removido ele vira Untracked
+<u>Tracked</u> são arquivos que podem ser rastreados no git pode ter 3 estágios diferentes:
 
-Modified - É o que sofreu alguma modificação, o git sabe através do SHA1 que foi modificado, comparando os números de SHA1.
+**<u>Unmodified</u>** - É o arquivo que ainda não foi modificado. Se ele não for usado e for removido ele vira Untracked.
 
-Staged - São os arquivos que estão se preparando para fazer parte de outro tipo de agrupamento. Acontecem em arquivo que estão em modified e acionamos o ‘git add *’ vai automaticamente para Stage esperando ser usado/ entrar em ação.
+**<u>Modified</u>** - É o que sofreu alguma modificação, o git sabe através do SHA1 que foi modificado, comparando os números de SHA1.
+
+**<u>Staged</u>** - São os arquivos que estão se preparando para fazer parte de outro tipo de agrupamento. Acontecem em arquivo que estão em modified e acionamos o ‘git add *’ vai automaticamente para Stage esperando ser usado/ entrar em ação.
 Esse agrupamento que ele pode ser usado para fazer parte de um commit/ Objeto, que retorna para unmodified com todos os arquivos dentro dele, para começar o ciclo novamente, confirmar que acabou com as alterações desses arquivos e salva esse arquivo com o código até o momento que foi alterado novamente, que inicia o ciclo novamente
 
-Untracked - Arquivos que criamos mas o git não sabe da existência, como o arquivo strogonoff que foi criado na pasta do pc com o .md, depois que foi acionado/ ‘rodado’ o comando ‘git add *’ foi movido direto p staged.
+**Untracked** - Arquivos que criamos mas o git não sabe da existência, como o arquivo strogonoff que foi criado na pasta do pc com o .md, depois que foi acionado/ ‘rodado’ o comando ‘git add *’ foi movido direto p staged.
 
-Trabalhamos com 2 ambientes o de desenvolvimento (tudo o que está na máquina/ pc git instalado e a pasta usada) e o do servidor (site do git)
+Trabalhamos com <u>2 ambientes</u>
 
-Working Directory - arquivos de trabalho (neste caso livro-receitas);
-Staging area - Área de preparação, quando dá o ‘git add *’ o arquivo livro-receita vai transitar na área de staging e working directory ‘um ciclo’ (Unmodified>Modified>Staged);
-Local Repository/ repositório local - Quando cria o commit desses arquivos, entra no ciclo de staging area e local repository. Depois disso pode fazer a modificação do repositório local no remoto.
+**O servidor** (site do git)
+
+**O ambiente  de desenvolvimento** (tudo o que está na máquina/ pc git instalado e a pasta usada).
+
+
+
+**Working Directory** - arquivos de trabalho (neste caso livro-receitas);
+**Staging area** - Área de preparação, quando dá o ‘git add *’ o arquivo livro-receita vai transitar na área de staging e working directory ‘um ciclo’ (Unmodified>Modified>Staged);
+**Local Repository/ repositório local** - Quando cria o commit desses arquivos, entra no ciclo de staging area e local repository. Depois disso pode fazer a modificação do repositório local no remoto.
 
 O comando ‘git status’ para ver em qual fase está o arquivo.
 
-Cont. criando um commit:
+<u>Cont. criando um commit:</u>
 
 Usamos o ls e enter> mostra o arquivo strogonoff.md > git status e enter p ver como está.
 
@@ -266,7 +296,7 @@ git status e enter > E vamos criar um commit
 git commit -m “adiciona index” e enter . Confirmar que foi criado
 
 
-Nota Fran: Ao tentar continuar a próxima aula tive um problema devido ao ‘name’ que cadastrei diferente do github no site.
+<u>Nota Fran:</u> Ao tentar continuar a próxima aula tive um problema devido ao ‘name’ que cadastrei diferente do github no site.
 
 Então use o seguinte comando para remover o que quero alterar
 git config --global --unset user.(o que quero remover)
